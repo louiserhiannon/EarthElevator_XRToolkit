@@ -1,0 +1,5 @@
+# This .gitconfig file should be placed at the root of your Unity project directory
+#
+
+[core]
+longpaths = true
