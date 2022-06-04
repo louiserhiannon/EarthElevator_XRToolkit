@@ -9,6 +9,8 @@ TagManager:
   - Welcome
   - Earthquake
   - PanelSwitch
+  - PlayerLeft
+  - PlayerRight
   layers:
   - Default
   - TransparentFX

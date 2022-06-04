@@ -3,3 +3,4 @@
 *.exr filter=lfs diff=lfs merge=lfs -text
 /EarthElevator_XRToolkit/Library/PackageCache/com.unity.burst@1.6.5/.Runtime/hostmac/lld filter=lfs diff=lfs merge=lfs -text
 *.dylib filter=lfs diff=lfs merge=lfs -text
+/EarthElevator_XRToolkit/Library/ArtifactDB filter=lfs diff=lfs merge=lfs -text

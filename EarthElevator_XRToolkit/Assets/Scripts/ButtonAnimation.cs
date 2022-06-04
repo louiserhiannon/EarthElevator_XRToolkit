@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class ButtonAnimation : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class ButtonAnimation : MonoBehaviour
     public ButtonPressedEvent OnButtonPressed;
 
     private Animator buttonAnim;
+    public ButtonPressHandAnimation leftHand;
+    public ButtonPressHandAnimation rightHand;
 
 
     void Awake()
@@ -17,18 +20,36 @@ public class ButtonAnimation : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "PlayerLeft" || other.tag == "PlayerRight")
         {
-            buttonAnim.SetTrigger("Pressed");
             OnButtonPressed();
+            buttonAnim.SetTrigger("Pressed");
+            if(other.tag == "PlayerLeft")
+            {
+                leftHand.PointFinger();
+            }
+            else if(other.tag == "PlayerRight")
+            {
+                rightHand.PointFinger();
+            }
+            
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "PlayerLeft" || other.tag == "PlayerRight")
         {
             buttonAnim.SetTrigger("Released");
+            if (other.tag == "PlayerLeft")
+            {
+                leftHand.UnpointFinger();
+            }
+            else if (other.tag == "PlayerRight")
+            {
+                rightHand.UnpointFinger();
+            }
+
         }
     }
 }

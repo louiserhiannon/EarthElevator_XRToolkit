@@ -331,8 +331,8 @@
 -r:"Library/Bee/artifacts/1300b0aE.dag/Unity.XR.OpenXR.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.UI.ref.dll"
-"Library/PackageCache/com.unity.xr.openxr@1.4.1/MockRuntime/MockRuntime.cs"
-"Library/PackageCache/com.unity.xr.openxr@1.4.1/MockRuntime/MockRuntimeFeatureSet.cs"
+"Library/PackageCache/com.unity.xr.openxr@1.4.2/MockRuntime/MockRuntime.cs"
+"Library/PackageCache/com.unity.xr.openxr@1.4.2/MockRuntime/MockRuntimeFeatureSet.cs"
 -langversion:9.0
 
 /deterministic

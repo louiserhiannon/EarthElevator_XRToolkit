@@ -20,7 +20,7 @@ public class WaterFlow : MonoBehaviour
 
     void Update()
     {
-        if(leverAngle.leverValue <= -0.4f)
+        if(leverAngle.leverValue <= 0.8f)
         {
             water.Play();
             flowTime += Time.deltaTime;

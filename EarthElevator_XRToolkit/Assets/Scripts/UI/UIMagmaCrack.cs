@@ -30,8 +30,15 @@ public class UIMagmaCrack : MonoBehaviour
     public float pauseBeforeTrophy = 6f;
     public float pauseAfterTrophy = 10f;
     private float pauseBeforeInstantiate = 6f;
+    public HapticController hapticLeft;
+    public HapticController hapticRight;
 
-   
+    private void Awake()
+    {
+        startScaleCrack = new Vector3(0,0,0);
+        endScaleCrack = new Vector3(-0.76f, 0.76f, 0.76f);
+    }
+
     public void UIActionMagmaCrack()
     {
         foreach (CanvasGroup panel in infoUI.GetComponentsInChildren<CanvasGroup>())
@@ -54,6 +61,9 @@ public class UIMagmaCrack : MonoBehaviour
         groundCrack.transform.localScale = startScaleCrack;
         audioSource.PlayOneShot(earthquakeSound);
         groundCrack.transform.DOScale(endScaleCrack, crackGrowthDuration);
+        Debug.Log("Crack should be growing");
+        hapticLeft.ActivateHaptic(1.0f, crackGrowthDuration);
+        hapticRight.ActivateHaptic(1.0f, crackGrowthDuration);
 
         yield return new WaitForSeconds(crackGrowthDuration);
 
@@ -72,6 +82,9 @@ public class UIMagmaCrack : MonoBehaviour
         yield return new WaitForSeconds(pauseAfterTrophy);
 
         TrophyPanelDisappear();
+        //temporary disappearance of handlens
+        yield return new WaitForSeconds(5f);
+        handlens.SetActive(false);
 
     }
 

@@ -26,8 +26,10 @@ public class MoveElevator : MonoBehaviour
     private float endPosUp = -30f;
     private float endPosDown = 120f;
     public Canvas infoUI;
-    public Canvas controllerLeftUI;
-    public Canvas controllerRightUI;
+    public Canvas trophyCanvas;
+    public Canvas referenceCanvasLeft;
+    public Canvas referenceCanvasRight;
+
     public Earthquake earthquake;
     public MoveLevelObjects setParent;
     
@@ -77,6 +79,7 @@ public class MoveElevator : MonoBehaviour
 
         //start level coroutines
         earthquake.BeginShake();
+        Debug.Log("coroutine started");
     }
 
     void Update()
@@ -278,20 +281,27 @@ public class MoveElevator : MonoBehaviour
             panel.blocksRaycasts = false;
         }
 
-        foreach (CanvasGroup controllerRightPanel in controllerRightUI.GetComponentsInChildren<CanvasGroup>())
+        foreach (CanvasGroup trophyPanel in trophyCanvas.GetComponentsInChildren<CanvasGroup>())
         {
-            controllerRightPanel.alpha = 0;
-            controllerRightPanel.interactable = false;
-            controllerRightPanel.blocksRaycasts = false;
+            trophyPanel.alpha = 0;
+            trophyPanel.interactable = false;
+            trophyPanel.blocksRaycasts = false;
         }
 
-        foreach (CanvasGroup controllerLeftPanel in controllerLeftUI.GetComponentsInChildren<CanvasGroup>())
-        {
-            controllerLeftPanel.alpha = 0;
-            controllerLeftPanel.interactable = false;
-            controllerLeftPanel.blocksRaycasts = false;
-        }
 
+        foreach (CanvasGroup referencePanel in referenceCanvasLeft.GetComponentsInChildren<CanvasGroup>())
+        {
+            referencePanel.alpha = 0;
+            referencePanel.interactable = false;
+            referencePanel.blocksRaycasts = false;
+        }
+        
+        foreach (CanvasGroup referencePanel in referenceCanvasRight.GetComponentsInChildren<CanvasGroup>())
+        {
+            referencePanel.alpha = 0;
+            referencePanel.interactable = false;
+            referencePanel.blocksRaycasts = false;
+        }
     }
 
     

@@ -26,8 +26,10 @@ public class Earthquake : MonoBehaviour
     public Canvas infoUI;
     public CanvasGroup earthquakePanel;
     public MoveElevator moveElevator;
-    
-    
+    public HapticController hapticLeft;
+    public HapticController hapticRight;
+
+
 
     void Start()
     {
@@ -51,6 +53,7 @@ public class Earthquake : MonoBehaviour
                 yield return null;
             }
 
+        Debug.Log("Elevator at Earthquake depth");
         yield return new WaitForSeconds(pauseBeforeShake);
 
         // check to see if it was just moving through
@@ -64,10 +67,15 @@ public class Earthquake : MonoBehaviour
         //}
 
         audioSource.PlayOneShot(earthquakeSound);
+        Debug.Log("Earthquake sound should be playing");
+        hapticLeft.ActivateHaptic(0.7f, shakeDuration);
+        hapticRight.ActivateHaptic(0.7f, shakeDuration);
+        Debug.Log("and I should be feeling a shake");
+
         
         while (shakeTime < shakeDuration)
         {
-            shakeTime += Time.fixedDeltaTime;
+            shakeTime += Time.deltaTime;
             amplitude = minAmplitude + (Mathf.Sin(2 * Mathf.PI * Time.time / amplitudePeriod) + 1) / 2 * (maxAmplitude - minAmplitude);
             transform.position = initialPosition + directionOfShake * Mathf.Sin(2 * Mathf.PI * frequency * Time.time) * amplitude;
 
@@ -90,7 +98,6 @@ public class Earthquake : MonoBehaviour
 
     }
 
-    
 
     private void ActivateEarthquakePanel()
     {
