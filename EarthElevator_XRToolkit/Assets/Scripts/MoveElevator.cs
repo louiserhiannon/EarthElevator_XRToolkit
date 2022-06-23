@@ -96,6 +96,7 @@ public class MoveElevator : MonoBehaviour
         {
             // move elevator down
             Debug.Log("destination depth more than current depth - should be moving down");
+            SetShaftSegments();
             MoveElevatorDown();
         }
 
@@ -104,6 +105,7 @@ public class MoveElevator : MonoBehaviour
         {
             // move elevator up
             Debug.Log("destination depth less than current depth - should be moving up");
+            SetShaftSegments();
             MoveElevatorUp();
         }
 
@@ -123,17 +125,13 @@ public class MoveElevator : MonoBehaviour
 
     }
 
-    public void MoveElevatorDown()
+    private void SetShaftSegments()
     {
-
-
-        //Activate correct shaft sections
-        
         for (int i = 0; i < activePoints.Count; i++)
         {
             for (int j = 0; j < transitionDepths.Count; j++)
             {
-                if (currentDepthShafts[i] > transitionDepths[j] && currentDepthShafts[i] < transitionDepths[j+1])
+                if (currentDepthShafts[i] > transitionDepths[j] && currentDepthShafts[i] < transitionDepths[j + 1])
                 {
                     for (int k = 0; k < layers.Count; k++)
                     {
@@ -144,7 +142,10 @@ public class MoveElevator : MonoBehaviour
                 }
             }
         }
+    }
 
+    public void MoveElevatorDown()
+    {
 
         //Set elevator speed (decelerate/accelerate 0-50 km either side of destination)
         speed = targetSpeed; //initialize speed
@@ -184,25 +185,7 @@ public class MoveElevator : MonoBehaviour
 
     public void MoveElevatorUp()
     {
-        //Activate correct shaft sections
-
-        for (int i = 0; i < activePoints.Count; i++)
-        {
-            for (int j = 0; j < transitionDepths.Count; j++)
-            {
-                if (currentDepthShafts[i] > transitionDepths[j] && currentDepthShafts[i] < transitionDepths[j + 1])
-                {
-                    for (int k = 0; k < layers.Count; k++)
-                    {
-                        layers[k].shafts[i].SetActive(false);
-
-                    }
-                    layers[j].shafts[i].SetActive(true);
-                }
-            }
-        }
-
-        //set elevator speed
+         //set elevator speed
 
         speed = targetSpeed; //initialize speed
         if ((currentDepth - destinationDepth < (targetSpeed * decelerationTime / 2) && currentDepth - destinationDepth > 1) || (currentDepth - destinationDepth > -(targetSpeed * decelerationTime / 2) && currentDepth - destinationDepth < -1))

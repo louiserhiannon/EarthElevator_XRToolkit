@@ -62,8 +62,8 @@ public class UIMagmaCrack : MonoBehaviour
         audioSource.PlayOneShot(earthquakeSound);
         groundCrack.transform.DOScale(endScaleCrack, crackGrowthDuration);
         Debug.Log("Crack should be growing");
-        hapticLeft.ActivateHaptic(1.0f, crackGrowthDuration);
-        hapticRight.ActivateHaptic(1.0f, crackGrowthDuration);
+        hapticLeft.ActivateHaptic(0.8f, crackGrowthDuration);
+        hapticRight.ActivateHaptic(0.8f, crackGrowthDuration);
 
         yield return new WaitForSeconds(crackGrowthDuration);
 
