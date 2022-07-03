@@ -15,7 +15,7 @@ C:/Users/looby/Documents/Unity/GitHub/EarthElevator_XRToolkit/EarthElevator_XRTo
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-58955
+49546
 Successfully changed project path to: C:/Users/looby/Documents/Unity/GitHub/EarthElevator_XRToolkit/EarthElevator_XRToolkit
 C:/Users/looby/Documents/Unity/GitHub/EarthElevator_XRToolkit/EarthElevator_XRToolkit
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,8 +47,8 @@ C:/Users/looby/Documents/Unity/GitHub/EarthElevator_XRToolkit/EarthElevator_XRTo
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 106.47 ms, found 9 plugins.
-Preloading 1 native plugins for Editor in 0.58 ms.
+Refreshing native plugins compatible for Editor in 176.73 ms, found 9 plugins.
+Preloading 1 native plugins for Editor in 0.73 ms.
 Initialize engine version: 2021.3.3f1 (af2e63e8f9bd)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/2021.3.3f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/Users/looby/Documents/Unity/GitHub/EarthElevator_XRToolkit/EarthElevator_XRToolkit/Assets
@@ -58,165 +58,52 @@ Direct3D:
     Renderer: NVIDIA GeForce RTX 3070 Laptop GPU (ID=0x249d)
     Vendor:   NVIDIA
     VRAM:     8044 MB
-    Driver:   30.0.15.1215
+    Driver:   31.0.15.1659
 Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/2021.3.3f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/2021.3.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/2021.3.3f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56520
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56560
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/2021.3.3f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/2021.3.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004086 seconds.
+Registered in 0.214487 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 105.70 ms, found 9 plugins.
-Preloading 1 native plugins for Editor in 0.17 ms.
+Refreshing native plugins compatible for Editor in 92.56 ms, found 9 plugins.
+Preloading 1 native plugins for Editor in 0.20 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.658 seconds
+- Completed reload, in  4.240 seconds
 Domain Reload Profiling:
-	ReloadAssembly (658ms)
-		BeginReloadAssembly (61ms)
+	ReloadAssembly (4240ms)
+		BeginReloadAssembly (2758ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (498ms)
-			LoadAssemblies (59ms)
+		EndReloadAssembly (980ms)
+			LoadAssemblies (2756ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (103ms)
+			SetupTypeCache (620ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (28ms)
-			SetupLoadedEditorAssemblies (318ms)
+			RebuildScriptCaches (25ms)
+			SetupLoadedEditorAssemblies (287ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (61ms)
+				InitializePlatformSupportModulesInManaged (49ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (106ms)
+				RefreshPlugins (93ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (99ms)
-				ProcessInitializeOnLoadMethodAttributes (51ms)
+				ProcessInitializeOnLoadAttributes (100ms)
+				ProcessInitializeOnLoadMethodAttributes (43ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.007748 seconds.
+Registered in 0.007764 seconds.
+Android Extension - Scanning For ADB Devices 4312 ms
 Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 102.66 ms, found 9 plugins.
-Preloading 1 native plugins for Editor in 0.08 ms.
-Package Manager log level set to [2]
-[XR] OculusXRPlugin: registering subsystems
-[XR] Unable to register display lifecyle provider: [1]
-[XR] Oculus Input lifecycle provider registered.
-[XR] Unable to register input lifecyle provider: [1]
-[XR] OVRP version 1.65.0
-Mono: successfully reloaded assembly
-- Completed reload, in  1.481 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1482ms)
-		BeginReloadAssembly (215ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (8ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (123ms)
-		EndReloadAssembly (1135ms)
-			LoadAssemblies (79ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (255ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (100ms)
-			SetupLoadedEditorAssemblies (643ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (12ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (103ms)
-				BeforeProcessingInitializeOnLoad (119ms)
-				ProcessInitializeOnLoadAttributes (310ms)
-				ProcessInitializeOnLoadMethodAttributes (94ms)
-				AfterProcessingInitializeOnLoad (5ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
-Platform modules already initialized, skipping
-========================================================================
-Worker process is ready to serve import requests
-Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 1.46 ms, found 9 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
-Unloading 5350 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 70 unused Assets / (0.5 MB). Loaded Objects now: 5805.
-Memory consumption went from 317.4 MB to 316.9 MB.
-Total: 3.930800 ms (FindLiveObjects: 0.452600 ms CreateObjectMapping: 0.451800 ms MarkObjects: 2.718800 ms  DeleteObjects: 0.306900 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 355254.624208 seconds.
-  path: Assets/Scenes/TestScene.unity
-  artifactKey: Guid(347e4184aa451e24d81dc1092d40c019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/TestScene.unity using Guid(347e4184aa451e24d81dc1092d40c019) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11e6ce0771e2b4f2b6da3002dc1c8991') in 0.012376 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 17.933734 seconds.
-  path: Assets/Models/Elevator3.fbx
-  artifactKey: Guid(c2c0ef4074d24ad43832b57b598d00ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Elevator3.fbx using Guid(c2c0ef4074d24ad43832b57b598d00ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86f8b70adbf956b7f2fd392c7c33f8a4') in 0.285639 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 158.837540 seconds.
-  path: Assets/Models/Elevator04.fbx
-  artifactKey: Guid(ef85406c67bc8a34dbb0fc6ccb5105a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Elevator04.fbx using Guid(ef85406c67bc8a34dbb0fc6ccb5105a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e64be88c0f4c46aa483f050e2931b937') in 0.097006 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 5.269470 seconds.
-  path: Assets/Models/Elevator04 1.fbx
-  artifactKey: Guid(9a44fc67938bf414787d0e043299923e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Elevator04 1.fbx using Guid(9a44fc67938bf414787d0e043299923e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d0f6f73b01c80018794fd38d3f31604') in 0.053222 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 4.248460 seconds.
-  path: Assets/Models/Elevator04.fbx
-  artifactKey: Guid(9a44fc67938bf414787d0e043299923e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Elevator04.fbx using Guid(9a44fc67938bf414787d0e043299923e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d413f04c1224a95583f3c56f72eb3a0') in 0.052175 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.389715 seconds.
-  path: Assets/Models/Shaft.fbx
-  artifactKey: Guid(215c9d920a11824449607ff347ade930) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Shaft.fbx using Guid(215c9d920a11824449607ff347ade930) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '015e238125937dabc79836b38310ac49') in 0.083230 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 18.317466 seconds.
-  path: Assets/Models/shaft 1.fbx
-  artifactKey: Guid(df6c57e0c9b528e4f8ea9bcf476a7102) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/shaft 1.fbx using Guid(df6c57e0c9b528e4f8ea9bcf476a7102) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7de40e84d74d9c32276c1a07f05e9109') in 0.027668 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 4.125611 seconds.
-  path: Assets/Models/Notebook1.blend
-  artifactKey: Guid(53d7d8b9199d5654c8e2848a344554a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/Notebook1.blend using Guid(53d7d8b9199d5654c8e2848a344554a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a99d4a748d925f52267f0faa1fa7b50c') in 0.350225 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 56.674223 seconds.
-  path: Assets/Materials/Real Materials
-  artifactKey: Guid(3574aa0cadf3ba04bac9363d67ff3577) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Real Materials using Guid(3574aa0cadf3ba04bac9363d67ff3577) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ba7365ff1cd807ab60ae9eb35875509') in 0.005392 seconds 

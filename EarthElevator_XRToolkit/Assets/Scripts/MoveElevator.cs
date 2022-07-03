@@ -22,8 +22,10 @@ public class MoveElevator : MonoBehaviour
     [SerializeField]
     private float acceleration;
     public LeverAngle leverAngle;
+    public SpeedSliderPosition speedSlider;
     public float leverValue;
-    private float endPosUp = -30f;
+    public float normalizedSpeed;
+    private float endPosUp = -80f;
     private float endPosDown = 120f;
     public Canvas infoUI;
     public Canvas trophyCanvas;
@@ -120,8 +122,11 @@ public class MoveElevator : MonoBehaviour
         }
 
         //Set target speed
-        leverValue = leverAngle.leverValue;
-        targetSpeed = leverValue * elevatorMaxSpeed;
+        //leverValue = leverAngle.leverValue;
+        //targetSpeed = leverValue * elevatorMaxSpeed;
+
+        normalizedSpeed = speedSlider.normalizedSpeed;
+        targetSpeed = normalizedSpeed * elevatorMaxSpeed;
 
     }
 
@@ -170,7 +175,7 @@ public class MoveElevator : MonoBehaviour
                     setParent.ResetLevelTransform();
                     activatedActivePoint = null;
                 }
-                activePoints[i].transform.Translate(0f, -150f, 0f); //translate by a distance, not TO a point
+                activePoints[i].transform.Translate(0f, -200f, 0f); //translate by a distance, not TO a point
             }
         }
         currentDepth += speed * Time.deltaTime;
@@ -208,7 +213,7 @@ public class MoveElevator : MonoBehaviour
                     setParent.ResetLevelTransform();
                     activatedActivePoint = null;
                 }
-                activePoints[i].transform.Translate(0f, 150f, 0f);
+                activePoints[i].transform.Translate(0f, 200f, 0f);
             }
         }
                 
