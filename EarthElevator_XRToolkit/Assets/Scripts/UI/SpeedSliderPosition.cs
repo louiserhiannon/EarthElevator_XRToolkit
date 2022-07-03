@@ -7,13 +7,13 @@ using UnityEngine.UI;
 public class SpeedSliderPosition : MonoBehaviour
 {
     public float normalizedSpeed;
-    private Scrollbar speedSlider;
+    private Slider speedSlider;
 
     
     // Start is called before the first frame update
     void Start()
     {
-        speedSlider = GetComponent<Scrollbar>();
+        speedSlider = GetComponent<Slider>();
         speedSlider.value = 0.5f;
     }
 
