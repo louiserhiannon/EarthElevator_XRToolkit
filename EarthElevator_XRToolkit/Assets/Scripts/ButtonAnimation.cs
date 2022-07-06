@@ -15,13 +15,13 @@ public class ButtonAnimation : MonoBehaviour
     public ButtonPressHandAnimation leftHand;
     public ButtonPressHandAnimation rightHand;
 
-    private Sprite thisImage;
+    private Image thisImage;
     public Sprite activeButton;
 
 
     void Awake()
     {
-        thisImage = GetComponent<Sprite>();
+        thisImage = GetComponent<Image>();
 
     }
 
@@ -50,7 +50,7 @@ public class ButtonAnimation : MonoBehaviour
         panelReset.ResetPanels();
 
         //for pressed button, change to active button
-        thisImage = activeButton;
+        thisImage.sprite = activeButton;
 
 
     }

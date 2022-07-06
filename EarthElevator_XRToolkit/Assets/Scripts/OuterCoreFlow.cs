@@ -30,6 +30,6 @@ public class OuterCoreFlow : MonoBehaviour
         textureScaleX = minTileX + (1 + Mathf.Cos(Time.time * flowSpeedX)) / 2 * (maxTileX - minTileX);
         textureScaleY = minTileY + (1 + Mathf.Cos(Time.time * flowSpeedY + flowOffset)) / 2 * (maxTileY - minTileY);
         textureMorph = new Vector2(textureScaleX, textureScaleY);
-        outerCore.materials[0].mainTextureScale = textureMorph;
+        outerCore.materials[1].mainTextureScale = textureMorph;
     }
 }

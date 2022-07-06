@@ -21,9 +21,9 @@ public class MoveElevator : MonoBehaviour
     private float decelerationTime = 7f;
     [SerializeField]
     private float acceleration;
-    public LeverAngle leverAngle;
+    //public LeverAngle leverAngle;
     public SpeedSliderPosition speedSlider;
-    public float leverValue;
+    //public float leverValue;
     public float normalizedSpeed;
     private float endPosUp = -80f;
     private float endPosDown = 120f;
@@ -34,6 +34,7 @@ public class MoveElevator : MonoBehaviour
 
     public Earthquake earthquake;
     public MoveLevelObjects setParent;
+    public MoveBlackHole moveBlackHole;
     
 
 
@@ -68,6 +69,7 @@ public class MoveElevator : MonoBehaviour
             
         }
 
+
         source = GetComponent<AudioSource>();
 
         //set max speed
@@ -77,10 +79,10 @@ public class MoveElevator : MonoBehaviour
         DisablePanels();
 
         //initialize activatedActivePanel
-        activatedActivePoint = activePoints[0];
+        activatedActivePoint = activePoints[2];
 
-        //start level coroutines
-        earthquake.BeginShake();
+    //start level coroutines
+    earthquake.BeginShake();
         Debug.Log("coroutine started");
     }
 
@@ -176,9 +178,18 @@ public class MoveElevator : MonoBehaviour
                     activatedActivePoint = null;
                 }
                 activePoints[i].transform.Translate(0f, -200f, 0f); //translate by a distance, not TO a point
+
+                
+
             }
         }
         currentDepth += speed * Time.deltaTime;
+
+        //Transfer BlackHole to final position
+        if(activePoints[2].childCount > layers.Count && currentDepth >= 85)
+        {
+            moveBlackHole.SetBlackHoleTransform();
+        }
 
         //stop sound when elevator stops and Set activePoint tether for next destination
         if (currentDepth > (destinationDepth - 1))
@@ -186,18 +197,21 @@ public class MoveElevator : MonoBehaviour
             StopElevatorSound();
             SetActivePoint();
         }       
+
+        
+
     }
 
     public void MoveElevatorUp()
     {
-         //set elevator speed
+        //set elevator speed
 
         speed = targetSpeed; //initialize speed
         if ((currentDepth - destinationDepth < (targetSpeed * decelerationTime / 2) && currentDepth - destinationDepth > 1) || (currentDepth - destinationDepth > -(targetSpeed * decelerationTime / 2) && currentDepth - destinationDepth < -1))
         {
             SetDecelerateAccelerate();
         }
-        
+
         //play elevator sound when moving
         PlayElevatorSound();
 
@@ -216,10 +230,16 @@ public class MoveElevator : MonoBehaviour
                 activePoints[i].transform.Translate(0f, 200f, 0f);
             }
         }
-                
+
         //update depth
         currentDepth -= speed * Time.deltaTime;
 
+        //grab black hole and make it a child of activePoints[2] again
+        if (activePoints[2].childCount <= layers.Count && currentDepth < endPosUp)
+        {
+            moveBlackHole.MoveBlackHoleWithShaft(activePoints[2]);
+        }
+        
         //stop sound when elevator stops and Set activePoint tether for next destination
         if (currentDepth < (destinationDepth + 1))
         {

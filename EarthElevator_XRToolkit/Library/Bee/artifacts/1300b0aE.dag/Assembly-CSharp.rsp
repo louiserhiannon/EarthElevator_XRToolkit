@@ -548,6 +548,7 @@
 "Assets/Scripts/HandPrefab.cs"
 "Assets/Scripts/HapticController.cs"
 "Assets/Scripts/LeverAngle.cs"
+"Assets/Scripts/MoveBlackHole.cs"
 "Assets/Scripts/MoveElevator.cs"
 "Assets/Scripts/MoveLevelObjects.cs"
 "Assets/Scripts/OuterCoreFlow.cs"

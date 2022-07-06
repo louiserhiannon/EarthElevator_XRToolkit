@@ -21,7 +21,7 @@ public class TempGaugeUI : MonoBehaviour
     void Start()
     {
         tempPointer = GetComponent<Transform>();
-        tempPointer.eulerAngles = new Vector3(0, 0, minTempAngle);
+        tempPointer.localEulerAngles = new Vector3(0, 0, minTempAngle);
     }
 
     
@@ -47,7 +47,7 @@ public class TempGaugeUI : MonoBehaviour
     {
         pointerAngleRange = minTempAngle - maxTempAngle;
         tempPointerAngle = minTempAngle - temperature / (maxTemp - minTemp) * pointerAngleRange;
-        tempPointer.eulerAngles = new Vector3(0, 0, tempPointerAngle);
+        tempPointer.localEulerAngles = new Vector3(0, 0, tempPointerAngle);
 
     }
 }

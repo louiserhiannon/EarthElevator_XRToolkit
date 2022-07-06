@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2399901485782199819}
   - component: {fileID: 480441390932302529}
   - component: {fileID: 3179179822443551871}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: shaftRound06OuterCore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,14 +26,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2137559002916436756}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!33 &2399901485782199819
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -101,8 +101,8 @@ MonoBehaviour:
   minTileX: 5
   maxTileY: 10
   minTileY: 5
-  flowSpeedX: 0.1
-  flowSpeedY: 0.1
+  flowSpeedX: 0.01
+  flowSpeedY: 0.01
   flowOffset: 30
   cosTime: 0
   textureScaleX: 0

@@ -19,7 +19,7 @@ public class PressureGaugeUI : MonoBehaviour
     void Start()
     {
         pressurePointer = GetComponent<Transform>();
-        pressurePointer.eulerAngles = new Vector3(0, 0, minPressureAngle);
+        pressurePointer.localEulerAngles = new Vector3(0, 0, minPressureAngle);
     }
 
     
@@ -44,8 +44,7 @@ public class PressureGaugeUI : MonoBehaviour
     {
         pointerAngleRange = minPressureAngle - maxPressureAngle;
         pressurePointerAngle = minPressureAngle - pressure / (maxPressure - minPressure) * pointerAngleRange;
-        pressurePointer.eulerAngles = new Vector3(0, 0, pressurePointerAngle);
-
+        pressurePointer.localEulerAngles = new Vector3(0, 0, pressurePointerAngle);
     }
 
 }

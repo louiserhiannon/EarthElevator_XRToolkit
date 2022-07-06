@@ -12,14 +12,16 @@ public class DepthGaugeUI : MonoBehaviour
     public RectTransform elevatorMarker;
     public float markerPosY;
     private float markerPosYRange;
-    public float markerPosYMax = 0.60f; 
-    public float markerPosYMin = -0.633f;
+    private float markerPosYMax; 
+    private float markerPosYMin;
         
 
     void Start()
     {
         elevatorMarker = GetComponent<RectTransform>();
-        elevatorMarker.anchoredPosition = new Vector2(-0.0215f, 0.6f);
+        markerPosYMax = 0.590f;
+        markerPosYMin = -0.640f;
+        elevatorMarker.anchoredPosition = new Vector2(-0.0215f, markerPosYMax);
       
     }
 
