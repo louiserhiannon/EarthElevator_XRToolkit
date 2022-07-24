@@ -547,6 +547,7 @@
 "Assets/Scripts/EarthRotation.cs"
 "Assets/Scripts/HandPrefab.cs"
 "Assets/Scripts/HapticController.cs"
+"Assets/Scripts/HoverBoardBobbing.cs"
 "Assets/Scripts/LeverAngle.cs"
 "Assets/Scripts/MoveBlackHole.cs"
 "Assets/Scripts/MoveElevator.cs"
