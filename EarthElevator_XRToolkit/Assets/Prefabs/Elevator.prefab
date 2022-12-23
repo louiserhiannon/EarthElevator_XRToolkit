@@ -1253,8 +1253,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 144
-  m_fontSizeBase: 144
+  m_fontSize: 130
+  m_fontSizeBase: 130
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2103,7 +2103,7 @@ MonoBehaviour:
   destination: {fileID: 0}
   showCanvas: {fileID: 0}
   referencePanel: {fileID: 0}
-  depth: 200
+  depth: 170
 --- !u!1 &2069627568
 GameObject:
   m_ObjectHideFlags: 0
@@ -2317,7 +2317,7 @@ GameObject:
   - component: {fileID: 8377324168941762206}
   - component: {fileID: 387328916312002655}
   - component: {fileID: 142912899232270753}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2393,7 +2393,7 @@ GameObject:
   - component: {fileID: 5192014105000231691}
   - component: {fileID: 1517413711945322459}
   - component: {fileID: 1768817369674174727}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2442,7 +2442,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -2599,7 +2599,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3884734149454196442}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2681,7 +2681,7 @@ GameObject:
   - component: {fileID: 8954555721207829380}
   - component: {fileID: 1711215915243516501}
   - component: {fileID: 2435663394325087677}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2757,7 +2757,7 @@ GameObject:
   - component: {fileID: 9130723798699200083}
   - component: {fileID: 1640584540444811449}
   - component: {fileID: 5587842835389384640}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2831,7 +2831,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8209197687074103504}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2993,6 +2993,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelPivot: {fileID: 7805184178159866967}
+  panelAngle: 0
 --- !u!1 &6958339025104580521
 GameObject:
   m_ObjectHideFlags: 0

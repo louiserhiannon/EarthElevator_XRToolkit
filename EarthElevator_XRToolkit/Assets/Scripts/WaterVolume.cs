@@ -13,6 +13,7 @@ public class WaterVolume : MonoBehaviour
     private float waterLevelZ;
     [SerializeField]
     private float fillCorrection = 1f;
+    public float relativeWetness;
 
     private void Start()
     {
@@ -28,5 +29,6 @@ public class WaterVolume : MonoBehaviour
         waterLevelZ = Mathf.Clamp(waterLevelZ, waterLevelMinZ, waterLevelMaxZ);
         waterLevel = new Vector3(0, 0, waterLevelZ);
         transform.localPosition = waterLevel;
+        relativeWetness = waterLevelZ / (waterLevelMaxZ - waterLevelMinZ);
     }
 }

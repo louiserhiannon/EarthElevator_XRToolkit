@@ -33,6 +33,7 @@ public class MoveElevator : MonoBehaviour
     public Canvas referenceCanvasRight;
 
     public Earthquake earthquake;
+    public MeltingLevelSetup melting;
     public MoveLevelObjects setParent;
     public MoveBlackHole moveBlackHole;
     
@@ -81,9 +82,11 @@ public class MoveElevator : MonoBehaviour
         //initialize activatedActivePanel
         activatedActivePoint = activePoints[2];
 
-    //start level coroutines
-    earthquake.BeginShake();
+        //start level coroutines
+        earthquake.BeginShake();
         Debug.Log("coroutine started");
+        melting.BeginMeltingLevelSetUp();
+
     }
 
     void Update()
